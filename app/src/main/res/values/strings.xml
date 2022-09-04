@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Burn-In Amoled Check</string>
+    <string name="what_is_burn_in">What is Burn-in?</string>
+    <string name="burn_in_check">Burn-in Check</string>
+    <string name="how_to_prevent_burn_in">How to prevent Burn-in!</string>
+</resources>
