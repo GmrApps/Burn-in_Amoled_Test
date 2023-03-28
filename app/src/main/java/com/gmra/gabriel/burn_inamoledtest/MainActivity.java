@@ -3,12 +3,15 @@ package com.gmra.gabriel.burn_inamoledtest;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -20,10 +23,15 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button whatisburnin, burninchecker, preventburnin;
-
+    Button whatisburnin, burninchecker, preventburnin, rate;
 
     AdView mAdView;
+    String TAG;
+
+
+
+
+
 
 
     @Override
@@ -46,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         whatisburnin=findViewById(R.id.whatisburnin);
         burninchecker=findViewById(R.id.burninchecker);
         preventburnin=findViewById(R.id.preventburnin);
+        rate=findViewById(R.id.rate);
 
 
         whatisburnin.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +80,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.gmra.gabriel.burn_inamoledtest")));
+                }
+                catch(ActivityNotFoundException e){
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=5470709155399569312")));
+
+                }
+            }
+        });
+
+
+
+
 
 
 
