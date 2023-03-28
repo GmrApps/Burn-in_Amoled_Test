@@ -51,7 +51,7 @@ public class check_burn extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {});
 
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this,"ca-app-pub-3246150512157335/9700017541", adRequest, new InterstitialAdLoadCallback() {
+        InterstitialAd.load(this,"ca-app-pub-xxxxxxxxxxxxxxxxxxxxxxxx", adRequest, new InterstitialAdLoadCallback() {
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                 // The mInterstitialAd reference will be null until
